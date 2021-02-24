@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="14">
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℙ(position)"/>
+<org.eventb.core.poIdentifier name="people" org.eventb.core.type="ℙ(people)"/>
+<org.eventb.core.poIdentifier name="passports" org.eventb.core.type="ℙ(passports)"/>
+<org.eventb.core.poIdentifier name="F" org.eventb.core.type="ℙ(people×position)"/>
+<org.eventb.core.poIdentifier name="pass_person" org.eventb.core.type="ℙ(passports×people)"/>
+<org.eventb.core.poIdentifier name="in_front" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="person2" org.eventb.core.type="people"/>
+<org.eventb.core.poIdentifier name="person1" org.eventb.core.type="people"/>
+<org.eventb.core.poIdentifier name="in_tunnel" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="pass" org.eventb.core.type="ℙ(people×passports)"/>
+<org.eventb.core.poIdentifier name="passed" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="is_pass_valid" org.eventb.core.type="ℙ(passports×BOOL)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#HYP("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂people·p∈people⇒p∈dom(pass)∧pass∈people ⇸ passports" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#9"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#HYP("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#HYP*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂passports·p∈passports⇒p∈dom(is_pass_valid)∧is_pass_valid∈passports ⇸ BOOL" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#="/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#="/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#HYP*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#HYP,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂passports·p∈passports⇒p∈dom(pass_person)∧pass_person∈passports ⇸ people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#@"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#HYP,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYP(" org.eventb.core.parentSet="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(position,{in_front},{in_tunnel},{passed})" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pass∈people → passports" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP*" org.eventb.core.parentSet="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#HYP(" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀p⦂people·p∈people⇒pass(p)∈passports" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="is_pass_valid∈passports → BOOL" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP," org.eventb.core.parentSet="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#HYP*" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀p⦂passports·p∈passports⇒is_pass_valid(p)∈BOOL" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="pass_person∈passports → people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#?"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PARAFE/params.bpo|org.eventb.core.poFile#params|org.eventb.core.poPredicateSet#HYP," org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="∀p⦂passports·p∈passports⇒pass_person(p)∈people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#@"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="person1∈people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#C"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="person2∈people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#D"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="F⊆people × position" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#G"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

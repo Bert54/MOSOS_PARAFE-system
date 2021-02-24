@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℙ(position)"/>
+<org.eventb.core.poIdentifier name="people" org.eventb.core.type="ℙ(people)"/>
+<org.eventb.core.poIdentifier name="passports" org.eventb.core.type="ℙ(passports)"/>
+<org.eventb.core.poIdentifier name="pass_person" org.eventb.core.type="ℙ(passports×people)"/>
+<org.eventb.core.poIdentifier name="in_front" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="pos" org.eventb.core.type="ℙ(people×position)"/>
+<org.eventb.core.poIdentifier name="door_entry" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="in_tunnel" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="pass" org.eventb.core.type="ℙ(people×passports)"/>
+<org.eventb.core.poIdentifier name="passed" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="tunnel" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="is_pass_valid" org.eventb.core.type="ℙ(passports×BOOL)"/>
+<org.eventb.core.poIdentifier name="door_exit" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="is_pass_valie" org.eventb.core.predicate="tunnel∈{0,1}" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="is_pass_valif" org.eventb.core.predicate="partition(position,{in_front},{in_tunnel},{passed})" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="is_pass_valig" org.eventb.core.predicate="∀p⦂people·p∈people⇒pos(p)∈position" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="is_pass_valih" org.eventb.core.predicate="pos∈people → position" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="is_pass_valii" org.eventb.core.predicate="door_entry∈{0,1}" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="is_pass_valij" org.eventb.core.predicate="door_exit∈{0,1}" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="is_pass_valik" org.eventb.core.predicate="pass∈people → passports" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="is_pass_valil" org.eventb.core.predicate="∀p⦂people·p∈people⇒pass(p)∈passports" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="is_pass_valim" org.eventb.core.predicate="is_pass_valid∈passports → BOOL" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="is_pass_valin" org.eventb.core.predicate="∀p⦂passports·p∈passports⇒is_pass_valid(p)∈BOOL" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="is_pass_valio" org.eventb.core.predicate="pass_person∈passports → people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#?"/>
+<org.eventb.core.poPredicate name="is_pass_valip" org.eventb.core.predicate="∀p⦂passports·p∈passports⇒pass_person(p)∈people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#@"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="person2" org.eventb.core.type="people"/>
+<org.eventb.core.poIdentifier name="person1" org.eventb.core.type="people"/>
+<org.eventb.core.poIdentifier name="positionp1" org.eventb.core.type="position"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="inv3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#HYPparamu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="person1∈dom(pos)∧pos∈people ⇸ position" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#HYPparamu"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#EVTALLHYPpositionp2"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="in_front=pos(person1')" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositionp2" org.eventb.core.parentSet="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="positionp1'" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="person1'" org.eventb.core.type="people"/>
+<org.eventb.core.poIdentifier name="person2'" org.eventb.core.type="people"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp2" org.eventb.core.parentSet="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#EVTIDENTpositionp2" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="HYPparamu" org.eventb.core.parentSet="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="person1∈people" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="person2∈people" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#HYPparamu" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="positionp1=pos(person1)" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="positionp1∈position" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#\/"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

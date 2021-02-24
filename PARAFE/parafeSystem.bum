@@ -1,9 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="pos :∣ (pos' ∈ people → position)" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="tunnel ≔ 0" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="door1 ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="door2 ≔ 0" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="params"/>
-<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="person1 ∈ people"/>
-<org.eventb.core.variable name="*" org.eventb.core.identifier="person1"/>
-<org.eventb.core.variable name="+" org.eventb.core.identifier="person2"/>
-<org.eventb.core.invariant name="," org.eventb.core.label="inv2" org.eventb.core.predicate="person2 ∈ people"/>
+<org.eventb.core.variable name="3" org.eventb.core.identifier="tunnel"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="inv5" org.eventb.core.predicate="tunnel ∈ {0,1}"/>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="door1"/>
+<org.eventb.core.variable name="6" org.eventb.core.identifier="door2"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv6" org.eventb.core.predicate="door1 ∈ {0,1}"/>
+<org.eventb.core.invariant name="8" org.eventb.core.label="inv7" org.eventb.core.predicate="door2 ∈ {0,1}"/>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON1SCAN">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="pos(person1) = in_front"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="is_pass_valid(pass(person1)) = TRUE"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="pos(person1) ≔ first_door" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="door1 ≔ 1" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="tunnel = 0"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="door1 = 0"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name=":" org.eventb.core.identifier="pos"/>
+<org.eventb.core.invariant name="=" org.eventb.core.label="inv9" org.eventb.core.predicate="pos ∈ people → position"/>
+<org.eventb.core.invariant name="&gt;" org.eventb.core.label="inv10" org.eventb.core.predicate="∀p · p ∈ people ⇒ pos(p) ∈ position"/>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON1DOOR1">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="pos(person1) = first_door"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="door1 = 1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="pos(person1) ≔ in_tunnel" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="tunnel ≔ 1" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="door1 ≔ 0" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON1PASSCHECK">
+<org.eventb.core.guard name="'" org.eventb.core.label="pos(person1) = in_tunnel" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="pass_person(pass(person1)) = person1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="pos(person1) ≔ second_door" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="door2 ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON1DOOR2">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="pos(person1) = second_door"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="door2 = 1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="pos(person1) ≔ passed" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="tunnel ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="door2 ≔ 0" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>
