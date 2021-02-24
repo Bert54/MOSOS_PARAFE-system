@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/PARAFE/params.bcc" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.seesContext#("/>
+<org.eventb.core.scInternalContext name="params">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="tunnel∈{0,1}" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(position,{in_front},{in_tunnel},{passed})" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="in_front" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#-" org.eventb.core.type="position"/>
+<org.eventb.core.scConstant name="in_tunnel" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#." org.eventb.core.type="position"/>
+<org.eventb.core.scConstant name="passed" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#\/" org.eventb.core.type="position"/>
+<org.eventb.core.scConstant name="tunnel" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scCarrierSet name="position" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#+" org.eventb.core.type="ℙ(position)"/>
+<org.eventb.core.scCarrierSet name="people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(people)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="paramt" org.eventb.core.label="inv1" org.eventb.core.predicate="person1∈people" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="paramu" org.eventb.core.label="inv2" org.eventb.core.predicate="person2∈people" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="person2" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.variable#+" org.eventb.core.type="people"/>
+<org.eventb.core.scVariable name="person1" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.variable#*" org.eventb.core.type="people"/>
+<org.eventb.core.scEvent name="person3" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#'">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="person2,person1 :∣ ⊤" org.eventb.core.label="GEN" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#'"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

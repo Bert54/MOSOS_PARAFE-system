@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℙ(position)"/>
+<org.eventb.core.poIdentifier name="people" org.eventb.core.type="ℙ(people)"/>
+<org.eventb.core.poIdentifier name="in_front" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="pos" org.eventb.core.type="ℙ(people×position)"/>
+<org.eventb.core.poIdentifier name="in_tunnel" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="passed" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="tunnel" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="in_tunnem" org.eventb.core.predicate="tunnel∈{0,1}" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="in_tunnen" org.eventb.core.predicate="partition(position,{in_front},{in_tunnel},{passed})" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="in_tunneo" org.eventb.core.predicate="∀p⦂people·p∈people⇒pos(p)∈position" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="in_tunnep" org.eventb.core.predicate="pos∈people → position" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="person2" org.eventb.core.type="people"/>
+<org.eventb.core.poIdentifier name="person1" org.eventb.core.type="people"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTperson3" org.eventb.core.parentSet="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poIdentifier name="person1'" org.eventb.core.type="people"/>
+<org.eventb.core.poIdentifier name="person2'" org.eventb.core.type="people"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPperson3" org.eventb.core.parentSet="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#EVTIDENTperson3" org.eventb.core.poStamp="4"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PARAFE/parafeSystem.bpo|org.eventb.core.poFile#parafeSystem|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="person1∈people" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="person2∈people" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#,"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

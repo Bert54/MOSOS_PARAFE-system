@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<index_root>
+<pim project="/PARAFE">
+<rodin_index>
+<descriptor element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.variable#+" name="person2">
+<occurrence element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.variable#+" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="0"/>
+</descriptor>
+<descriptor element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#)" name="people">
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="15" loc_char_start="9"/>
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="10"/>
+<occurrence element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="10"/>
+</descriptor>
+<descriptor element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#+" name="position">
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="18" loc_char_start="10"/>
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#+" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="35" loc_char_start="27"/>
+</descriptor>
+<descriptor element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#'" name="INITIALISATION">
+<occurrence element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+</descriptor>
+<descriptor element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#." name="in_tunnel">
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="42" loc_char_start="33"/>
+</descriptor>
+<descriptor element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#-" name="in_front">
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="29" loc_char_start="21"/>
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#-" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/PARAFE/params.buc|org.eventb.core.contextFile#params" name="params">
+<occurrence element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.seesContext#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#0" name="pos">
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="21" loc_char_start="18"/>
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#0" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.variable#*" name="person1">
+<occurrence element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="0"/>
+<occurrence element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.variable#*" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+<descriptor element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#\/" name="passed">
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#\/" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="52" loc_char_start="46"/>
+</descriptor>
+<descriptor element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem" name="parafeSystem">
+<occurrence element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem" kind="org.eventb.core.declaration"/>
+</descriptor>
+<descriptor element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#'" name="tunnel">
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="6" loc_char_start="0"/>
+<occurrence element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+</descriptor>
+</rodin_index>
+<export_table>
+<export file="/PARAFE/parafeSystem.bum">
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#)" name="people"/>
+<exported element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#'" name="INITIALISATION"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#." name="in_tunnel"/>
+<exported element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.variable#*" name="person1"/>
+<exported element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.variable#+" name="person2"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#-" name="in_front"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#\/" name="passed"/>
+<exported element="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem" name="parafeSystem"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#+" name="position"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params" name="params"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#0" name="pos"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#'" name="tunnel"/>
+</export>
+<export file="/PARAFE/params.buc">
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#)" name="people"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#." name="in_tunnel"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#-" name="in_front"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#\/" name="passed"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params" name="params"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#+" name="position"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#'" name="tunnel"/>
+<exported element="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#0" name="pos"/>
+</export>
+</export_table>
+<graph is_sorted="true">
+<node label="/PARAFE/params.buc" mark="false" order_pos="0"/>
+<node label="/PARAFE/parafeSystem.bum" mark="false" order_pos="1">
+<predecessor label="/PARAFE/params.buc"/>
+</node>
+</graph>
+<unprocessed file="/PARAFE/params.bcc_tmp"/>
+<unprocessed file="/PARAFE/parafeSystem.bcm"/>
+<unprocessed file="/PARAFE/parafeSystem.bpo"/>
+<unprocessed file="/PARAFE/parafeSystem.bpr"/>
+<unprocessed file="/PARAFE/parafeSystem.bps"/>
+<unprocessed file="/PARAFE/params.bcc"/>
+<unprocessed file="/PARAFE/params.bpo"/>
+<unprocessed file="/PARAFE/params.bpr"/>
+<unprocessed file="/PARAFE/params.bps"/>
+</pim>
+<delta_list>
+<delta element="/PARAFE/params.bpo" kind="FILE_CHANGED"/>
+<delta element="/PARAFE/params.bpr" kind="FILE_CHANGED"/>
+<delta element="/PARAFE/params.bps" kind="FILE_CHANGED"/>
+<delta element="/PARAFE/params.bcc" kind="FILE_CHANGED"/>
+</delta_list>
+<indexer_registry>
+<registry_entry element_type="org.eventb.core.machineFile">
+<indexer id="machineIndexer"/>
+</registry_entry>
+<registry_entry element_type="org.eventb.core.contextFile">
+<indexer id="contextIndexer"/>
+</registry_entry>
+</indexer_registry>
+</index_root>

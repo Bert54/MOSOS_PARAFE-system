@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.constant name="'" org.eventb.core.identifier="tunnel"/>
+<org.eventb.core.axiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="tunnel ∈ {0,1}"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.identifier="people"/>
+<org.eventb.core.axiom name="*" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(position, {in_front}, {in_tunnel}, {passed})"/>
+<org.eventb.core.carrierSet name="+" org.eventb.core.identifier="position"/>
+<org.eventb.core.axiom name="," org.eventb.core.label="axm3" org.eventb.core.predicate="∀p · p ∈ people ⇒ pos(p) ∈ position"/>
+<org.eventb.core.constant name="-" org.eventb.core.identifier="in_front"/>
+<org.eventb.core.constant name="." org.eventb.core.identifier="in_tunnel"/>
+<org.eventb.core.constant name="/" org.eventb.core.identifier="passed"/>
+<org.eventb.core.constant name="0" org.eventb.core.identifier="pos"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm4" org.eventb.core.predicate="pos ∈ people → position"/>
+<org.eventb.core.constant name="2" org.eventb.core.identifier="door_entry"/>
+<org.eventb.core.constant name="3" org.eventb.core.identifier="door_exit"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="axm5" org.eventb.core.predicate="door_entry ∈ {0,1}"/>
+<org.eventb.core.axiom name="5" org.eventb.core.label="axm6" org.eventb.core.predicate="door_exit ∈ {0,1}"/>
+<org.eventb.core.carrierSet name="6" org.eventb.core.identifier="passports"/>
+<org.eventb.core.constant name="7" org.eventb.core.identifier="pass"/>
+<org.eventb.core.axiom name="8" org.eventb.core.label="axm7" org.eventb.core.predicate="pass ∈ people → passports"/>
+<org.eventb.core.axiom name="9" org.eventb.core.label="axm8" org.eventb.core.predicate="∀p · p ∈ people ⇒ pass(p) ∈ passports"/>
+<org.eventb.core.constant name=":" org.eventb.core.identifier="is_pass_valid"/>
+<org.eventb.core.axiom name=";" org.eventb.core.label="axm9" org.eventb.core.predicate="is_pass_valid ∈ passports → BOOL"/>
+<org.eventb.core.axiom name="=" org.eventb.core.label="axm10" org.eventb.core.predicate="∀p · p ∈ passports ⇒ is_pass_valid(p) ∈ BOOL"/>
+<org.eventb.core.constant name="&gt;" org.eventb.core.identifier="pass_person"/>
+<org.eventb.core.axiom name="?" org.eventb.core.label="axm11" org.eventb.core.predicate="pass_person ∈ passports → people"/>
+<org.eventb.core.axiom name="@" org.eventb.core.label="axm12" org.eventb.core.predicate="∀p · p ∈ passports ⇒ pass_person(p) ∈ people"/>
+</org.eventb.core.contextFile>
