@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="params"/>
+<org.eventb.core.refinesMachine name=")" org.eventb.core.target="parafeSystem"/>
+<org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PERSON1SCAN">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PERSON1SCAN"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PERSON1DOOR1">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PERSON1DOOR1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON1PASSCHECK">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PERSON1PASSCHECK"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="positionp1 = in_tunnel"/>
+<org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="(pass_person(pass(person1)) = person1) ∧ (finger(person1) = fp_exp_person1)"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="positionp1 ≔ second_door" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="door2 ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PERSON1DOOR2">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PERSON1DOOR2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PERSON2SCAN">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PERSON2SCAN"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PERSON2DOOR1">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PERSON2DOOR1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON2PASSCHECK">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PERSON2PASSCHECK"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="positionp2 = in_tunnel"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="(pass_person(pass(person2)) = person2) ∧ (finger(person2) = fp_exp_person2)"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="positionp2 ≔ second_door" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="door2 ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PERSON2DOOR2">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PERSON2DOOR2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="tunnel"/>
+<org.eventb.core.variable name="3" org.eventb.core.identifier="door1"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="door2"/>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="positionp1"/>
+<org.eventb.core.variable name="6" org.eventb.core.identifier="positionp2"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv1" org.eventb.core.predicate="tunnel ∈ {0,1}"/>
+<org.eventb.core.invariant name="8" org.eventb.core.label="inv2" org.eventb.core.predicate="door1 ∈ {0,1}"/>
+<org.eventb.core.invariant name="9" org.eventb.core.label="inv3" org.eventb.core.predicate="door2 ∈ {0,1}"/>
+<org.eventb.core.invariant name=":" org.eventb.core.label="inv4" org.eventb.core.predicate="positionp1 ∈ position"/>
+<org.eventb.core.invariant name=";" org.eventb.core.label="inv5" org.eventb.core.predicate="positionp2 ∈ position"/>
+</org.eventb.core.machineFile>

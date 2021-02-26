@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON1SCAN/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON1SCAN/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON1SCAN/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON1DOOR1/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON1DOOR1/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON1PASSCHECK/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON1PASSCHECK/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON1DOOR2/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON1DOOR2/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON1SCANUNAUTHORIZED/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON1SCANUNAUTHORIZED/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="77" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON2SCAN/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="78" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON2SCAN/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="78" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON2SCAN/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="78" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON2DOOR1/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="78" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON2DOOR1/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="78" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON2PASSCHECK/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="78" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON2PASSCHECK/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="78" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON2DOOR2/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="78" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON2DOOR2/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="78" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON2SCANUNAUTHORIZED/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PERSON2SCANUNAUTHORIZED/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="79" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON1SCAN/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON1SCAN/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON1DOOR1/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON1DOOR1/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON1PASSCHECK/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON1PASSCHECK/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON1DOOR2/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON1DOOR2/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON2SCAN/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON2SCAN/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON2DOOR1/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON2DOOR1/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON2PASSCHECK/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON2PASSCHECK/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON2DOOR2/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PERSON2DOOR2/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

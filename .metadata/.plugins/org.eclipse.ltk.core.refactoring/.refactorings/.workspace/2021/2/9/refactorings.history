@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;PARAFE_insp&apos;" deleteContents="false" description="Delete resource &apos;PARAFE_insp&apos;" element1="/PARAFE_insp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1614350753648"/>
+</session>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.scContextFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd">
-<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="tunnel∈{0,1}" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
-<org.eventb.core.scConstant name="tunnel" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
-<org.eventb.core.scCarrierSet name="position" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#+" org.eventb.core.type="ℙ(position)"/>
-<org.eventb.core.scCarrierSet name="people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(people)"/>
-</org.eventb.core.scContextFile>
