@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
 <org.eventb.core.carrierSet name=")" org.eventb.core.identifier="people"/>
-<org.eventb.core.axiom name="*" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(position, {in_front}, {first_door}, {in_tunnel}, {second_door}, {passed})"/>
+<org.eventb.core.axiom name="*" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(position, {in_front}, {first_door}, {in_tunnel}, {second_door}, {passed}, {unauthorized})"/>
 <org.eventb.core.carrierSet name="+" org.eventb.core.identifier="position"/>
 <org.eventb.core.constant name="-" org.eventb.core.identifier="in_front"/>
 <org.eventb.core.constant name="/" org.eventb.core.identifier="passed"/>
@@ -26,4 +26,9 @@
 <org.eventb.core.axiom name="L" org.eventb.core.label="axm16" org.eventb.core.predicate="person1 ≠ person2"/>
 <org.eventb.core.constant name="M" org.eventb.core.identifier="first_door"/>
 <org.eventb.core.constant name="O" org.eventb.core.identifier="second_door"/>
+<org.eventb.core.axiom name="P" org.eventb.core.comment="axiom which determins whether or not person1's passport is valid" org.eventb.core.label="axm17" org.eventb.core.predicate="is_pass_valid(pass(person1)) = TRUE"/>
+<org.eventb.core.axiom name="Q" org.eventb.core.comment="axiom which determins whether or not the photo on person1's passport is indeed them" org.eventb.core.label="axm18" org.eventb.core.predicate="pass_person(pass(person1)) = person1"/>
+<org.eventb.core.constant name="R" org.eventb.core.identifier="unauthorized"/>
+<org.eventb.core.axiom name="S" org.eventb.core.comment="axiom which determins whether or not person2's passport is valid" org.eventb.core.label="axm19" org.eventb.core.predicate="is_pass_valid(pass(person2)) = TRUE"/>
+<org.eventb.core.axiom name="T" org.eventb.core.comment="axiom which determins whether or not the photo on person2's passport is indeed them" org.eventb.core.label="axm20" org.eventb.core.predicate="pass_person(pass(person2)) = person2"/>
 </org.eventb.core.contextFile>
