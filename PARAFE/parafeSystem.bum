@@ -74,4 +74,44 @@
 <org.eventb.core.action name="*" org.eventb.core.assignment="tunnel ≔ 0" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="door2 ≔ 0" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON1SCANUNAUTHORIZED">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="positionp1 = in_front"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="positionp1 ≔ unauthorized" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="tunnel = 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="door1 = 0"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="is_pass_valid(pass(person1)) = FALSE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON2SCANUNAUTHORIZED">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="positionp2 = in_front"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="tunnel = 0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="door1 = 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="is_pass_valid(pass(person2)) = FALSE"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="positionp2 ≔ unauthorized" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON1PASSCHECKUNAUTHORIZED">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="positionp1 = in_tunnel"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="(pass_person(pass(person1)) ≠ person1) ∨ (finger(person1) ≠ fp_exp_person1)"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="positionp1 ≔ unauthorizedscan" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="door1 ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON1PASSCHECKUNAUTHORIZEDOUT">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="positionp1 = unauthorizedscan"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="door1 = 1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="positionp1 ≔ unauthorized" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="door1 ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="tunnel ≔ 0" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON2PASSCHECKUNAUTHORIZED">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="positionp2 = in_tunnel"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="pass_person(pass(person2)) ≠ person2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="positionp2 ≔ unauthorizedscan" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="door1 ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PERSON2PASSCHECKUNAUTHORIZEDOUT">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="positionp2 = unauthorizedscan"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="door1 = 1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="positionp2 ≔ unauthorized" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="door1 ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="tunnel ≔ 0" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>

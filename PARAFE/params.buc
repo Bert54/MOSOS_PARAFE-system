@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.codegen.ui.taskingContextAttribute="Tasking" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" version="3">
 <org.eventb.core.carrierSet name=")" org.eventb.core.identifier="people"/>
-<org.eventb.core.axiom name="*" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(position, {in_front}, {first_door}, {in_tunnel}, {second_door}, {passed}, {unauthorized})"/>
+<org.eventb.core.axiom name="*" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(position, {in_front}, {first_door}, {in_tunnel}, {second_door}, {passed}, {unauthorized}, {unauthorizedscan})"/>
 <org.eventb.core.carrierSet name="+" org.eventb.core.identifier="position"/>
 <org.eventb.core.constant name="-" org.eventb.core.identifier="in_front"/>
 <org.eventb.core.constant name="/" org.eventb.core.identifier="passed"/>
@@ -29,11 +29,12 @@
 <org.eventb.core.carrierSet name="[" org.eventb.core.identifier="fingerprints"/>
 <org.eventb.core.constant name="\" org.eventb.core.identifier="finger"/>
 <org.eventb.core.axiom name="]" org.eventb.core.label="axm16" org.eventb.core.predicate="finger ∈ people → fingerprints"/>
-<org.eventb.core.axiom name="b" org.eventb.core.label="axm20" org.eventb.core.predicate="finger(person1) = fp_exp_person1"/>
+<org.eventb.core.axiom name="b" org.eventb.core.comment="axiom which determins if person1's fingerprint indentifies them as the expected person" org.eventb.core.label="axm20" org.eventb.core.predicate="finger(person1) = fp_exp_person1"/>
 <org.eventb.core.constant name="c" org.eventb.core.identifier="fp_exp_person1"/>
 <org.eventb.core.constant name="d" org.eventb.core.identifier="fp_exp_person2"/>
 <org.eventb.core.axiom name="e" org.eventb.core.label="axm21" org.eventb.core.predicate="fp_exp_person1 ∈ fingerprints"/>
 <org.eventb.core.axiom name="f" org.eventb.core.label="axm22" org.eventb.core.predicate="fp_exp_person2 ∈ fingerprints"/>
 <org.eventb.core.axiom name="g" org.eventb.core.label="axm23" org.eventb.core.predicate="fp_exp_person1 ≠ fp_exp_person2"/>
-<org.eventb.core.axiom name="h" org.eventb.core.label="axm24" org.eventb.core.predicate="finger(person2) ≠ fp_exp_person2"/>
+<org.eventb.core.axiom name="h" org.eventb.core.comment="axiom which determins if person2's fingerprint indentifies them as the expected person" org.eventb.core.label="axm24" org.eventb.core.predicate="finger(person2) = fp_exp_person2"/>
+<org.eventb.core.constant name="i" org.eventb.core.identifier="unauthorizedscan"/>
 </org.eventb.core.contextFile>

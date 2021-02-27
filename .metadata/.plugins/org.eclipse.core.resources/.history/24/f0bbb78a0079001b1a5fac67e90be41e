@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="fingerprints" org.eventb.core.type="ℙ(fingerprints)"/>
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℙ(position)"/>
+<org.eventb.core.poIdentifier name="people" org.eventb.core.type="ℙ(people)"/>
+<org.eventb.core.poIdentifier name="passports" org.eventb.core.type="ℙ(passports)"/>
+<org.eventb.core.poIdentifier name="pass_person" org.eventb.core.type="ℙ(passports×people)"/>
+<org.eventb.core.poIdentifier name="in_front" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="person2" org.eventb.core.type="people"/>
+<org.eventb.core.poIdentifier name="person1" org.eventb.core.type="people"/>
+<org.eventb.core.poIdentifier name="first_door" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="fp_exp_person1" org.eventb.core.type="fingerprints"/>
+<org.eventb.core.poIdentifier name="fp_exp_person2" org.eventb.core.type="fingerprints"/>
+<org.eventb.core.poIdentifier name="in_tunnel" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="pass" org.eventb.core.type="ℙ(people×passports)"/>
+<org.eventb.core.poIdentifier name="passed" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="is_pass_valid" org.eventb.core.type="ℙ(passports×BOOL)"/>
+<org.eventb.core.poIdentifier name="unauthorized" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="second_door" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="finger" org.eventb.core.type="ℙ(people×fingerprints)"/>
+<org.eventb.core.poPredicate name="fp_exp_person3" org.eventb.core.predicate="partition(position,{in_front},{first_door},{in_tunnel},{second_door},{passed},{unauthorized})" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="fp_exp_person4" org.eventb.core.predicate="pass∈people → passports" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="fp_exp_person5" org.eventb.core.predicate="∀p⦂people·p∈people⇒pass(p)∈passports" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="fp_exp_person6" org.eventb.core.predicate="is_pass_valid∈passports → BOOL" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="fp_exp_person7" org.eventb.core.predicate="pass_person∈passports → people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#?"/>
+<org.eventb.core.poPredicate name="fp_exp_person8" org.eventb.core.predicate="person1∈people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#C"/>
+<org.eventb.core.poPredicate name="fp_exp_person9" org.eventb.core.predicate="person2∈people" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#D"/>
+<org.eventb.core.poPredicate name="fp_exp_person:" org.eventb.core.predicate="person1≠person2" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#L"/>
+<org.eventb.core.poPredicate name="fp_exp_person;" org.eventb.core.predicate="is_pass_valid(pass(person1))=FALSE" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#P"/>
+<org.eventb.core.poPredicate name="fp_exp_person=" org.eventb.core.predicate="pass_person(pass(person1))=person1" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#Q"/>
+<org.eventb.core.poPredicate name="fp_exp_person&gt;" org.eventb.core.predicate="is_pass_valid(pass(person2))=TRUE" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#S"/>
+<org.eventb.core.poPredicate name="fp_exp_person?" org.eventb.core.predicate="pass_person(pass(person2))=person2" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#T"/>
+<org.eventb.core.poPredicate name="fp_exp_person@" org.eventb.core.predicate="finger∈people → fingerprints" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#]"/>
+<org.eventb.core.poPredicate name="fp_exp_personA" org.eventb.core.predicate="finger(person1)=fp_exp_person1" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#b"/>
+<org.eventb.core.poPredicate name="fp_exp_personB" org.eventb.core.predicate="fp_exp_person1∈fingerprints" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#e"/>
+<org.eventb.core.poPredicate name="fp_exp_personC" org.eventb.core.predicate="fp_exp_person2∈fingerprints" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#f"/>
+<org.eventb.core.poPredicate name="fp_exp_personD" org.eventb.core.predicate="fp_exp_person1≠fp_exp_person2" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#g"/>
+<org.eventb.core.poPredicate name="fp_exp_personE" org.eventb.core.predicate="finger(person2)=fp_exp_person2" org.eventb.core.source="/PARAFE/params.buc|org.eventb.core.contextFile#params|org.eventb.core.axiom#h"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="positionp2" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="positionp1" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="tunnel" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="door2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="door1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="positionp3" org.eventb.core.predicate="tunnel∈{0,1}" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#4"/>
+<org.eventb.core.poPredicate name="positionp4" org.eventb.core.predicate="door1∈{0,1}" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#7"/>
+<org.eventb.core.poPredicate name="positionp5" org.eventb.core.predicate="door2∈{0,1}" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poPredicate name="positionp6" org.eventb.core.predicate="positionp1∈position" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#="/>
+<org.eventb.core.poPredicate name="positionp7" org.eventb.core.predicate="positionp2∈position" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.invariant#&gt;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp3"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp3"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp3"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositionp3" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="door1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tunnel'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="positionp1'" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="door2'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="positionp2'" org.eventb.core.type="position"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp3" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTIDENTpositionp3" org.eventb.core.poStamp="8"/>
+<org.eventb.core.poSequent name="PERSON1SCAN/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp4"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#9"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON1SCAN\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositionp4" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="door1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="positionp1'" org.eventb.core.type="position"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp4" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTIDENTpositionp4" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="positionp1=in_front" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#9|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tunnel=0" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#9|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="door1=0" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#9|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="is_pass_valid(pass(person1))=TRUE" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#9|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PERSON1DOOR1/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp5"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#?"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON1DOOR1\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PERSON1DOOR1/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp5"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#?"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON1DOOR1\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositionp5" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="door1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tunnel'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="positionp1'" org.eventb.core.type="position"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp5" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTIDENTpositionp5" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="positionp1=first_door" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#?|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="door1=1" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#?|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PERSON1PASSCHECK/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp6"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#@"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON1PASSCHECK\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositionp6" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="positionp1'" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="door2'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp6" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTIDENTpositionp6" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="positionp1=in_tunnel" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#@|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pass_person(pass(person1))=person1" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#@|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PERSON1DOOR2/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp7"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#A"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#7"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON1DOOR2\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PERSON1DOOR2/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp7"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#A"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#7"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON1DOOR2\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositionp7" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="tunnel'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="positionp1'" org.eventb.core.type="position"/>
+<org.eventb.core.poIdentifier name="door2'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp7" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTIDENTpositionp7" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="positionp1=second_door" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#A|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="door2=1" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#A|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PERSON2SCAN/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp8"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#E"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#8"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON2SCAN\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositionp8" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="door1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="positionp2'" org.eventb.core.type="position"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp8" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTIDENTpositionp8" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="positionp2=in_front" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#E|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tunnel=0" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#E|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="door1=0" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#E|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="is_pass_valid(pass(person2))=TRUE" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#E|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PERSON2DOOR1/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp9"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#F"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON2DOOR1\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PERSON2DOOR1/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp9"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#F"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON2DOOR1\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositionp9" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="door1'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tunnel'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="positionp2'" org.eventb.core.type="position"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp9" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTIDENTpositionp9" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="positionp2=first_door" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#F|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="door1=1" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#F|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PERSON2PASSCHECK/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp:"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#G"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#:"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON2PASSCHECK\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositionp:" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="door2'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="positionp2'" org.eventb.core.type="position"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp:" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTIDENTpositionp:" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="positionp2=in_tunnel" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#G|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pass_person(pass(person2))=person2" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#G|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PERSON2DOOR2/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#H"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#;"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON2DOOR2\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PERSON2DOOR2/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#H"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#;"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON2DOOR2\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositionp;" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="tunnel'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="door2'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="positionp2'" org.eventb.core.type="position"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp;" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTIDENTpositionp;" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="positionp2=second_door" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#H|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="door2=1" org.eventb.core.source="/PARAFE/parafeSystem.bum|org.eventb.core.machineFile#parafeSystem|org.eventb.core.event#H|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PERSON1SCANUNAUTHORIZED/grd4/WD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTHYPpositionp=)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="person1∈dom(pass)∧pass∈people ⇸ passports∧pass(person1)∈dom(is_pass_valid)∧is_pass_valid∈passports ⇸ BOOL" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#=|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#=|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTHYPpositionp=)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTHYPpositionp=)" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="positionp1=in_front" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#=|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tunnel=0" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#=|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="door1=0" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#=|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp=" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTHYPpositionp=)" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="is_pass_valid(pass(person1))=FALSE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#=|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PERSON2SCANUNAUTHORIZED/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTHYPpositionp&gt;)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="person2∈dom(pass)∧pass∈people ⇸ passports∧pass(person2)∈dom(is_pass_valid)∧is_pass_valid∈passports ⇸ BOOL" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#&gt;|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#&gt;|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTHYPpositionp&gt;)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PERSON2SCANUNAUTHORIZED/positionp2/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTALLHYPpositionp&gt;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="unauthorized=positionp2" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#&gt;|org.eventb.core.action#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#&gt;"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poSequent#PERSON2SCANUNAUTHORIZED\/positionp2\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositionp&gt;" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="positionp2'" org.eventb.core.type="position"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpositionp&gt;)" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTIDENTpositionp&gt;" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="positionp2=in_front" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#&gt;|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tunnel=0" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#&gt;|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="door1=0" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#&gt;|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositionp&gt;" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#EVTHYPpositionp&gt;)" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="is_pass_valid(pass(person2))=FALSE" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.event#&gt;|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PARAFE/parafeUnauthorized.bpo|org.eventb.core.poFile#parafeUnauthorized|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="tunnel∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="door1∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="door2∈{0,1}" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="positionp1∈position" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="positionp2∈position" org.eventb.core.source="/PARAFE/parafeUnauthorized.bum|org.eventb.core.machineFile#parafeUnauthorized|org.eventb.core.invariant#3"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
