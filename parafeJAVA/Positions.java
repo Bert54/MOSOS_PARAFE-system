@@ -1,5 +1,3 @@
-package parafeJAVA;
-
 public enum Positions {
     FIRST_DOOR,
     IN_FRONT,

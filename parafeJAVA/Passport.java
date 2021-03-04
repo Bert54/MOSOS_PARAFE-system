@@ -1,28 +1,23 @@
-package parafeJAVA;
+public enum Passport {
+    PASSPORT1(Person.PERSON1),
+    PASSPORT2(Person.PERSON2);
 
-public class Passport {
-
-    private Person person;
+    private final Person person;
 
     public Person getPerson() {
-        return person;
+        if(this == PASSPORT1){
+            return Person.PERSON1;
+        }
+        else {
+            return Person.PERSON2;
+        }
     }
 
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    public Passport(Person person) {
+    Passport(Person person) {
         this.person = person;
     }
 
     public boolean is_pass_valid(){
-        boolean valid = false;
-        if(this.person == Person.PERSON1){
-            valid =  true;
-        } else if(this.person == Person.PERSON2){
-            valid =  true;
-        }
-        return valid;
+        return (this == PASSPORT1 || this == PASSPORT2);
     }
 }
